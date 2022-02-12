@@ -1,0 +1,338 @@
+/** Styles for all slides */
+.every-slide {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	min-height: 100vh;
+	position: absolute;
+	width: 100%;
+    left: 0;
+}
+
+/* PLAC UNII LUBELSKIEJ */
+
+#slide1-bw {
+	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ WIDOK\ NA\ POŁUDNIE\ HIGH\ RES\ BW.jpg');
+
+	top: 0;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
+#slide1-bw.fade {
+    opacity: 0;
+}
+
+#slide1-color {
+	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ WIDOK\ NA\ POŁUDNIE\ HIGH\ RES.jpg');
+
+	top: 0;
+
+	z-index: 2;
+}
+
+/* PLAC UNII LUBELSKIEJ - slajd 2 */
+
+#slide1b-bw {
+	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
+
+	top: 0;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
+}
+
+#slide1b-bw.fade {
+    opacity: 0;
+}
+
+#slide1b-color {
+	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
+
+	top: 0;
+
+	z-index: 0;
+}
+
+
+/* ULICA CHOCIMSKA */
+
+#slide2-bw {
+	background-image: url('../img/Chocimska/[ACC]\ BW\ HIGIENA\ CHOCIMSKA\ REDUKCJA\ PRZEPALENIA3.jpg');
+
+	top: 100vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
+#slide2-bw.fade {
+    opacity: 0;
+}
+
+#slide2-color {
+	background-image: url('../img/Chocimska/[ACC]\ HIGIENA\ CHOCIMSKA\ koloryzowane.jpg');
+
+	top: 100vh;
+
+    z-index: 2;
+}
+
+/* ULICA CHOCIMSKA - slajd 2 */
+
+#slide2b-bw {
+	background-image: url('../img/Chocimska/[ACC]\ CHOCIMSKA\ BW.jpg');
+
+	top: 100vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
+}
+
+#slide2b-bw.fade {
+    opacity: 0;
+}
+
+#slide2b-color {
+	background-image: url('../img/Chocimska/[ACC]\ CHOCIMSKA.jpg');
+
+	top: 100vh;
+
+    z-index: 0;
+}
+
+/* PARK MORSKIE OKO */
+
+#slide3-bw {
+	background-image: url('../img/Morskie\ Oko/[ACC]Morskie Oko BW.jpg');
+
+	top: 200vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
+#slide3-bw.fade {
+    opacity: 0;
+}
+
+#slide3-color {
+	background-image: url('../img/Morskie\ Oko/[ACC]Morskie Oko koloryzacja.jpg');
+
+	top: 200vh;
+
+    z-index: 2;
+}
+
+/* PAŁAC SZUSTRA */
+
+#slide4-bw {
+	background-image: url('../img/Pałac\ Szustra/SZUSTRA_A2_BW.jpg');
+
+	top: 300vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
+#slide4-bw.fade {
+    opacity: 0;
+}
+
+#slide4-color {
+	background-image: url('../img/Pałac\ Szustra/SZUSTRA KOLOR.jpg');
+
+	top: 300vh;
+
+    z-index: 2;
+}
+
+/* ULICA KONDUKTORSKA */
+
+#slide5-bw {
+	background-image: url('../img/Konduktorska/KONDUKTORSKA\ BW\(gimp\).jpg');
+
+	top: 400vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
+#slide5-bw.fade {
+    opacity: 0;
+}
+
+#slide5-color {
+	background-image: url('../img/Konduktorska/KONDUKTORSKA\ KOLOR.jpg');
+
+	top: 400vh;
+
+    z-index: 2;
+}
+
+/* ULICA DOLNA */
+
+#slide6-bw {
+	background-image: url('../img/Dolna/[ACC]\ DOLNA\ DUŻE_\ \(warstwa\ BW\).jpg');
+
+	top: 500vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
+#slide6-bw.fade {
+    opacity: 0;
+}
+
+#slide6-color {
+	background-image: url('../img/Dolna/[ACC]\ DOLNA.jpg');
+
+	top: 500vh;
+
+	z-index: 2;
+}
+
+/* ULICA DOLNA - slajd 2 */
+
+#slide6b-bw {
+	background-image: url('../img/Dolna/DOLNAcz.jpg');
+
+	top: 500vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
+}
+
+#slide6b-bw.fade {
+    opacity: 0;
+}
+
+#slide6b-color {
+	background-image: url('../img/Dolna/dolna\ koloryzacja_s.jpg');
+
+	top: 500vh;
+
+	z-index: 0;
+}
+
+/* KLUB SPORTOWY WARSZAWIANKA */
+
+#slide7-bw {
+	background-image: url('../img/Warszawianka/[ACC]\ WARSZAWIANKA\ BW.jpg');
+
+	top: 600vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
+}
+
+#slide7-bw.fade {
+    opacity: 0;
+}
+
+#slide7-color {
+    background-image: url('../img/Warszawianka/[ACC]\ WARSZAWIANKA\ KOLOR.jpg');
+
+	top: 600vh;
+
+	z-index: 0;
+}
+
+
+/* KRÓLIKARNIA */
+
+#slide8-bw {
+	background-image: url('../img/Królikarnia/[ACC]\ Królikarnia\ BW.jpg');
+
+	top: 700vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
+}
+
+#slide8-bw.fade {
+    opacity: 0;
+}
+
+#slide8-color {
+    background-image: url('../img/Królikarnia/[ACC]\ Królikarnia\ kolor.jpg');
+
+	top: 700vh;
+
+	z-index: 0;
+}
+
+/* SKOCZNIA NARCIARSKA “SKARPA” */
+
+#slide9-bw {
+	background-image: url('../img/skocznia/SKOCZNIA\ A2\ BW.jpg');
+
+	top: 800vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
+#slide9-bw.fade {
+    opacity: 0;
+}
+
+#slide9-color {
+	background-image: url('../img/skocznia/SKOCZNIA\ A1\ KOLOR.jpg');
+
+	top: 800vh;
+
+    z-index: 2;
+}
+
+/* SKOCZNIA NARCIARSKA “SKARPA”  - slajd 2 */
+
+#slide9b-bw {
+	background-image: url('../img/skocznia/SKOCZNIA\ B2\ BW.jpg');
+
+	top: 800vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
+}
+
+#slide9b-bw.fade {
+    opacity: 0;
+}
+
+#slide9b-color {
+	background-image: url('../img/skocznia/SKOCZNIA\ B1\ KOLOR.jpg');
+
+	top: 800vh;
+
+    z-index: 0;
+}
