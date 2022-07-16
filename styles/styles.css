@@ -20,7 +20,8 @@ body {
 	display: none;
 }
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+
+@media (min-width:320px) {
 	#desktop {
 		display: none;
 	}
@@ -29,8 +30,6 @@ body {
 		display: block;
 	}
 }
-
-@media only screen and (max-width: 768px) {}
 
 #m-slide-1 {
 	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
