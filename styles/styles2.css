@@ -1,3 +1,7 @@
+body {
+	scroll-behavior: scroll;
+}
+
 .e0_3 {
 	overflow: hidden;
 }
@@ -11,7 +15,7 @@
 
 .e2_3 {
 	background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-	width: 100vw;
+	width: 99vw;
 	height: 50px;
 	position: absolute;
 	left: 0px;
