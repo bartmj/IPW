@@ -21,7 +21,8 @@ body {
 }
 
 
-@media (min-width:320px) {
+
+@media only screen and (max-width: 768px) {
 	#desktop {
 		display: none;
 	}
