@@ -20,7 +20,7 @@ body {
 	display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1208px) {
 	#desktop {
 		display: none;
 	}
@@ -31,11 +31,6 @@ body {
 
 }
 
-#m-slide-1 {
-	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
-	background-size: 140%;
-	height: 420px;
-}
 
 #plac-text {
 	margin-top: 2em;
@@ -111,8 +106,6 @@ body {
 }
 
 
-
-
 .navigation li.active {
 	font-weight: bolder;
 }
@@ -134,17 +127,6 @@ body {
 	height: 72px;
 }
 
-/* #wsad-con {
-	position: fixed;
-	z-index: 3;
-	bottom: 28px;
-	left: 42px;
-}
-
-#wsad-con img {
-	height: 32px;
-} */
-
 button {
 	transition: opacity 0.5s;
 }
@@ -159,5 +141,4 @@ button {
 
 #animated-con p {
 	font-size: 16px;
-}
 }

@@ -1,0 +1,33 @@
+/** Font */
+@font-face {
+	font-family: 'Euclid Flex';
+	src: url('../fonts/@font-face/7ca06963c2e0a99b0a44cad7b4f84ba6.woff2') format('woff2'),
+		url('../fonts/@font-face/7ca06963c2e0a99b0a44cad7b4f84ba6.woff') format('woff');
+
+}
+
+body {
+	font-family: 'Euclid Flex';
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.mobile-slide-1 {
+	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
+	background-position: center center;
+	background-size: 140%;
+	height: 420px;
+	background-repeat: no-repeat;
+}
+
+#iframe-1 {
+	width: 100%;
+}
+
+.mobile-point-title {
+	background-color: antiquewhite;
+}
