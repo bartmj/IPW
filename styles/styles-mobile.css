@@ -24,7 +24,15 @@ body {
 	background-repeat: no-repeat;
 }
 
-#iframe-1 {
+.mobile-slide-2 {
+	background-image: url('../img/Chocimska/[ACC]\ CHOCIMSKA.jpg');
+	background-position: center center;
+	background-size: 140%;
+	height: 320px;
+	background-repeat: no-repeat;
+}
+
+.iframe {
 	width: 100%;
 	height: 320px;
 }
