@@ -63,7 +63,7 @@
 /* ULICA CHOCIMSKA */
 
 #slide2-bw {
-    background-image: url('../img/Chocimska/CHOCIMSKA\ KOLOR.jpg');
+    background-image: url('../img/Chocimska/CHOCIMSKA\ A1\ KOLOR.png');
     top: 100vh;
 
     opacity: 100;
@@ -77,7 +77,7 @@
 }
 
 #slide2-color {
-    background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
+    background-image: url('../img/Chocimska/CHOCIMSKA\ A2\ BW.png');
 
 
     top: 100vh;
@@ -88,7 +88,7 @@
 /* PLAC UNII LUBELSKIEJ - slajd 2 */
 
 #slide2b-bw {
-    background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
+    background-image: url('../img/Chocimska/CHOCIMSKA\ A1\ KOLOR.png');
 
     top: 100vh;
 
@@ -103,7 +103,7 @@
 }
 
 #slide2b-color {
-    background-image: url('../img/Chocimska/[ACC]\ BW\ HIGIENA\ CHOCIMSKA\ REDUKCJA\ PRZEPALENIA3.jpg');
+    background-image: url('../img/Chocimska/CHOCIMSKA\ A2\ BW.png');
 
     top: 100vh;
 
