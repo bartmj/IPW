@@ -255,3 +255,8 @@ mapBtn.onclick = function () {
         first_click = true;
     }
 }
+
+addEventListener('resize', (event) => {
+    console.log("resize")
+    window.location.reload(true);
+});

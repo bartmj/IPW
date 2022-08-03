@@ -16,7 +16,7 @@ body {
 	flex-wrap: wrap;
 }
 
-.mobile-slide-1 {
+#mobile-slide-1 {
 	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
 	background-position: center center;
 	background-size: 140%;
