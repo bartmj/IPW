@@ -20,7 +20,7 @@ body {
 	display: none;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 960px) {
 	#desktop {
 		display: none;
 	}
@@ -41,8 +41,7 @@ body {
 	position: fixed;
 	z-index: 10;
 	bottom: 0;
-	left: 0;
-	width: 100vw;
+	width: calc(100vw - 306px);
 	display: flex;
 	justify-content: center;
 	height: 100px;
