@@ -59,9 +59,10 @@ body {
 	position: relative;
 	top: -320px;
 	opacity: 0;
-	height: 320;
+	height: 0;
 	transition: 1s;
 	z-index: -1;
+	margin-top: 1em;
 }
 
 .opacity-button {
@@ -78,5 +79,5 @@ body {
 }
 
 #map-btn-1 {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }

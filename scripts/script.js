@@ -240,7 +240,7 @@ animateLogo();
 mapBtn.onclick = () => {
     iframe.style.opacity = "1"
     iframe.style.top = "0"
-    iframe.style.height = 320
+    iframe.style.height = "320px"
 
-    console.log(iframe)
+
 }
