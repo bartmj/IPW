@@ -235,7 +235,11 @@ function animateLogo() {
     }, 1000)
 }
 /** Animate logo */
-animateLogo();
+
+
+if (window.innerWidth > 760) {
+    animateLogo();
+}
 
 mapBtn.onclick = () => {
 
@@ -256,7 +260,10 @@ mapBtn.onclick = function () {
     }
 }
 
-// addEventListener('resize', (event) => {
-//     console.log("resize")
-//     window.location.reload(true);
-// });
+window.addEventListener('resize', (event) => {
+    console.log("resize")
+
+    if (window.innerWidth < 905) {
+        document.getElementById('animated').style.display = 'none';
+    }
+});
