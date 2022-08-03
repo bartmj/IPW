@@ -38,11 +38,18 @@ body {
 }
 
 .mobile-point-title {
-	background-color: antiquewhite;
+	background-color: rgb(209, 209, 209);
 	padding: 0.5em;
 }
 
 .mobile-text-1 {
 	margin-top: 1em;
 	margin-bottom: 1em;
+}
+
+#mobile-logo {
+	height: 12vw;
+	background-image: url('../img/IPW_logo.gif');
+	background-size: 30%;
+	background-repeat: no-repeat;
 }
