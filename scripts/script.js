@@ -11,6 +11,13 @@ const slidesPair5 = document.getElementsByClassName('slides6')
 const slidesPair6 = document.getElementsByClassName('slides7')
 const slidesPair7 = document.getElementsByClassName('slides8')
 const slidesPair8 = document.getElementsByClassName('slides9')
+// Iframe
+const iframe = document.getElementById('iframe-a')
+// Iframe
+// Map Button
+const mapBtn = document.getElementById('map-btn-1')
+// Map Button
+
 /** */
 const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
     slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
@@ -229,3 +236,11 @@ function animateLogo() {
 }
 /** Animate logo */
 animateLogo();
+
+mapBtn.onclick = () => {
+    iframe.style.opacity = "1"
+    iframe.style.top = "0"
+    iframe.style.height = 320
+
+    console.log(iframe)
+}

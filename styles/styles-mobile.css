@@ -25,7 +25,7 @@ body {
 }
 
 .mobile-slide-2 {
-	background-image: url('../img/Chocimska/[ACC]\ CHOCIMSKA.jpg');
+	background-image: url('../img/Chocimska/CHOCIMSKA\ KOLOR.jpg');
 	background-position: center center;
 	background-size: 140%;
 	height: 320px;
@@ -35,10 +35,11 @@ body {
 .iframe {
 	width: 100%;
 	height: 320px;
+	z-index: -1;
 }
 
 .mobile-point-title {
-	background-color: rgb(209, 209, 209);
+	background-color: rgb(240, 240, 240);
 	padding: 0.5em;
 }
 
@@ -52,4 +53,30 @@ body {
 	background-image: url('../img/IPW_logo.gif');
 	background-size: 30%;
 	background-repeat: no-repeat;
+}
+
+#iframe-a {
+	position: relative;
+	top: -320px;
+	opacity: 0;
+	height: 320;
+	transition: 1s;
+	z-index: -1;
+}
+
+.opacity-button {
+	background: linear-gradient(#f8f8f8, #ffffff 40%, #f5f5f5 3%, #b9b9b9);
+	opacity: 0.7;
+	color: rgb(41, 41, 41);
+	border: 1px solid rgb(58, 58, 58);
+	border-radius: 15px;
+	width: 178px;
+	margin: 6px;
+	align-self: center;
+	font-family: 'Euclid Flex', 'Merriweather Sans', sans-serif;
+	padding: 2px;
+}
+
+#map-btn-1 {
+	margin-bottom: 2em;
 }
