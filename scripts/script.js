@@ -238,9 +238,20 @@ function animateLogo() {
 animateLogo();
 
 mapBtn.onclick = () => {
-    iframe.style.opacity = "1"
-    iframe.style.top = "0"
-    iframe.style.height = "320px"
 
+}
 
+var first_click = true;
+mapBtn.onclick = function () {
+    if (first_click) {
+        iframe.style.opacity = "1"
+        iframe.style.top = "0"
+        iframe.style.height = "320px"
+        first_click = false;
+    } else {
+        iframe.style.opacity = "0"
+        iframe.style.top = "1"
+        iframe.style.height = "0px"
+        first_click = true;
+    }
 }
