@@ -256,7 +256,7 @@ mapBtn.onclick = function () {
     }
 }
 
-addEventListener('resize', (event) => {
-    console.log("resize")
-    window.location.reload(true);
-});
+// addEventListener('resize', (event) => {
+//     console.log("resize")
+//     window.location.reload(true);
+// });
