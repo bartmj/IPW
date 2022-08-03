@@ -27,7 +27,7 @@
 }
 
 #slide1-color {
-    background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ WIDOK\ NA\ POŁUDNIE\ HIGH\ RES.jpg');
+    background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
 
     top: 0;
 
@@ -37,7 +37,7 @@
 /* PLAC UNII LUBELSKIEJ - slajd 2 */
 
 #slide1b-bw {
-    background-image: url('../img/Plac_Unii/');
+    background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ WIDOK\ NA\ POŁUDNIE\ HIGH\ RES.jpg');
 
     top: 0;
 
@@ -52,7 +52,7 @@
 }
 
 #slide1b-color {
-    background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
+    background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ WIDOK\ NA\ POŁUDNIE\ HIGH\ RES\ BW.jpg');
 
     top: 0;
 
