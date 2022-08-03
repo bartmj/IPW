@@ -17,14 +17,21 @@ const iframe = document.getElementById('iframe-a')
 // Map Button
 const mapBtn = document.getElementById('map-btn-1')
 // Map Button
-
+// Resize event
+window.addEventListener('resize', (event) => {
+    windowHeight = window.innerHeight
+    if (window.innerWidth < 905) {
+        document.getElementById('animated').style.display = 'none';
+    }
+});
+// Resize event
 /** */
 const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
     slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
 const waypoints = [true, false, false, false, false, false, false, false, false]
 const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 /** */
-const windowHeight = window.innerHeight
+let windowHeight = window.innerHeight
 /** */
 const photoNr = document.getElementById('photo-count')
 /** */
@@ -260,10 +267,3 @@ mapBtn.onclick = function () {
     }
 }
 
-window.addEventListener('resize', (event) => {
-    console.log("resize")
-
-    if (window.innerWidth < 905) {
-        document.getElementById('animated').style.display = 'none';
-    }
-});
