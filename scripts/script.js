@@ -18,6 +18,9 @@ const iframe = document.getElementById('iframe-a')
 const mapBtn = document.getElementById('map-btn-1')
 // Map Button
 // Resize event
+/** */
+let windowHeight = window.innerHeight
+/** */
 window.addEventListener('resize', (event) => {
     windowHeight = window.innerHeight
     if (window.innerWidth < 905) {
@@ -30,9 +33,7 @@ const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
     slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
 const waypoints = [true, false, false, false, false, false, false, false, false]
 const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1]
-/** */
-let windowHeight = window.innerHeight
-/** */
+
 const photoNr = document.getElementById('photo-count')
 /** */
 /** Horizontal gallery - beginning */
@@ -268,8 +269,6 @@ mapBtn.onclick = function () {
 }
 
 
-
-
 var first_click3 = true;
 document.getElementById('map-btn-2').onclick = function () {
     if (first_click3) {
@@ -286,8 +285,6 @@ document.getElementById('map-btn-2').onclick = function () {
 }
 
 
-
-
 var first_click2 = true;
 document.getElementById("color-btn-1").onclick = () => {
     if (first_click2) {
@@ -300,6 +297,7 @@ document.getElementById("color-btn-1").onclick = () => {
         first_click2 = true;
     }
 }
+
 
 var first_click3 = true;
 document.getElementById("color-btn-2").onclick = () => {
