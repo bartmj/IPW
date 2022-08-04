@@ -105,8 +105,7 @@ body {
 	height: 0;
 	transition: 0.1s;
 	z-index: -1;
-	margin-top: 1em;
-	margin-bottom: 1em;
+
 }
 
 #iframe-b {
@@ -116,8 +115,7 @@ body {
 	height: 0;
 	transition: 0.1s;
 	z-index: -1;
-	margin-top: 1em;
-	margin-bottom: 1em;
+
 
 }
 
@@ -125,6 +123,7 @@ body {
 	display: flex;
 	justify-content: center;
 	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .opacity-button {
@@ -134,7 +133,7 @@ body {
 	border: 1px solid rgb(58, 58, 58);
 	border-radius: 15px;
 	width: 178px;
-	margin: 0 6px;
+	margin: 0 0.5em;
 	align-self: center;
 	font-family: 'Euclid Flex', 'Merriweather Sans', sans-serif;
 	/* align-self: center; */

@@ -259,14 +259,14 @@ mapBtn.onclick = function () {
         iframe.style.opacity = "1"
         iframe.style.top = "0"
         iframe.style.height = "320px"
-
+        iframe.style.marginBottom = "1em"
         document.getElementById('iframe-a').style.zIndex = "10"
         first_click = false;
     } else {
         iframe.style.opacity = "0"
         iframe.style.top = "1"
         iframe.style.height = "0px"
-
+        iframe.style.marginBottom = "0em"
         document.getElementById('iframe-a').style.zIndex = "-1"
         first_click = true;
     }
@@ -280,14 +280,14 @@ document.getElementById('map-btn-2').onclick = function () {
         iframeB.style.opacity = "1"
         iframeB.style.top = "0"
         iframeB.style.height = "320px"
-
+        iframeB.style.marginBottom = "1em"
         iframeB.style.zIndex = "10"
         first_click3 = false;
     } else {
         iframeB.style.opacity = "0"
         iframeB.style.top = "1"
         iframeB.style.height = "0px"
-
+        iframeB.style.marginBottom = "0em"
         iframeB.style.zIndex = "-1"
         first_click3 = true;
     }
