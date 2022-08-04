@@ -267,6 +267,27 @@ mapBtn.onclick = function () {
     }
 }
 
+
+
+
+var first_click3 = true;
+document.getElementById('map-btn-2').onclick = function () {
+    if (first_click3) {
+        document.getElementById('iframe-b').style.opacity = "1"
+        document.getElementById('iframe-b').style.top = "0"
+        document.getElementById('iframe-b').style.height = "320px"
+        first_click3 = false;
+    } else {
+        document.getElementById('iframe-b').style.opacity = "0"
+        document.getElementById('iframe-b').style.top = "1"
+        document.getElementById('iframe-b').style.height = "0px"
+        first_click3 = true;
+    }
+}
+
+
+
+
 var first_click2 = true;
 document.getElementById("color-btn-1").onclick = () => {
     if (first_click2) {

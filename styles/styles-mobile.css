@@ -108,6 +108,16 @@ body {
 	margin-top: 1em;
 }
 
+#iframe-b {
+	position: relative;
+	top: -320px;
+	opacity: 0;
+	height: 0;
+	transition: 0.1s;
+	z-index: -1;
+	margin-top: 1em;
+}
+
 #opacity-btn-container {
 	display: flex;
 	justify-content: center;
