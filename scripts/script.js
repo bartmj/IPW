@@ -259,27 +259,36 @@ mapBtn.onclick = function () {
         iframe.style.opacity = "1"
         iframe.style.top = "0"
         iframe.style.height = "320px"
+
+        document.getElementById('iframe-a').style.zIndex = "10"
         first_click = false;
     } else {
         iframe.style.opacity = "0"
         iframe.style.top = "1"
         iframe.style.height = "0px"
+
+        document.getElementById('iframe-a').style.zIndex = "-1"
         first_click = true;
     }
 }
 
 
 var first_click3 = true;
+const iframeB = document.getElementById('iframe-b')
 document.getElementById('map-btn-2').onclick = function () {
     if (first_click3) {
-        document.getElementById('iframe-b').style.opacity = "1"
-        document.getElementById('iframe-b').style.top = "0"
-        document.getElementById('iframe-b').style.height = "320px"
+        iframeB.style.opacity = "1"
+        iframeB.style.top = "0"
+        iframeB.style.height = "320px"
+
+        iframeB.style.zIndex = "10"
         first_click3 = false;
     } else {
-        document.getElementById('iframe-b').style.opacity = "0"
-        document.getElementById('iframe-b').style.top = "1"
-        document.getElementById('iframe-b').style.height = "0px"
+        iframeB.style.opacity = "0"
+        iframeB.style.top = "1"
+        iframeB.style.height = "0px"
+
+        iframeB.style.zIndex = "-1"
         first_click3 = true;
     }
 }
