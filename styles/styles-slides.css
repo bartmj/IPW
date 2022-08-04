@@ -261,7 +261,7 @@ z-index: 0;
 /* ULICA DOLNA - slajd 2 */
 
 #slide6b-bw {
-    background-image: url('../img/Dolna/DOLNAcz.jpg');
+    background-image: url('../img/Dolna/dolna\ koloryzacja_s.jpg');
 
     top: 500vh;
 
@@ -276,7 +276,7 @@ z-index: 0;
 }
 
 #slide6b-color {
-    background-image: url('../img/Dolna/dolna\ koloryzacja_s.jpg');
+    background-image: url('../img/Dolna/DOLNAcz.jpg');
 
     top: 500vh;
 
