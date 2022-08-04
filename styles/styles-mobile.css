@@ -22,15 +22,23 @@ body {
 	background-size: 140%;
 	height: 320px;
 	background-repeat: no-repeat;
-	margin-bottom: 1em;
+	z-index: 10;
 }
 
-.mobile-slide-2 {
-
+#mobile-slide-1bw {
+	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
 	background-position: center center;
+	top: -320px;
+	position: relative;
 	background-size: 140%;
 	height: 320px;
 	background-repeat: no-repeat;
+	opacity: 0;
+	transition: 2s;
+}
+
+#mobile-sliders {
+	height: 320px;
 }
 
 .iframe {
