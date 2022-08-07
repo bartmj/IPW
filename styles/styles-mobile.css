@@ -19,10 +19,10 @@ body {
 #mobile-slide-1 {
 	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
 	background-position: center center;
-	background-size: 140%;
 	height: 320px;
 	background-repeat: no-repeat;
 	z-index: 10;
+	background-size: cover;
 }
 
 #mobile-slide-1bw {
@@ -30,21 +30,21 @@ body {
 	background-position: center center;
 	top: -320px;
 	position: relative;
-	background-size: 140%;
 	height: 320px;
 	background-repeat: no-repeat;
 	opacity: 0;
 	transition: 2s;
+	background-size: cover;
 }
 
 /* Chocimska */
 #mobile-slide-2 {
 	background-image: url('../img/Chocimska/CHOCIMSKA\ A1\ KOLOR.png');
 	background-position: center center;
-	background-size: 140%;
 	height: 320px;
 	background-repeat: no-repeat;
 	z-index: 10;
+	background-size: cover;
 }
 
 #mobile-slide-2bw {
@@ -52,11 +52,11 @@ body {
 	background-position: center center;
 	top: -320px;
 	position: relative;
-	background-size: 140%;
 	height: 320px;
 	background-repeat: no-repeat;
 	opacity: 0;
 	transition: 2s;
+	background-size: cover;
 }
 
 /* Chocimska */
