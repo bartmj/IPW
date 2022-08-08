@@ -290,8 +290,6 @@ document.getElementById('map-btn-2').onclick = function () {
     }
 }
 
-
-
 /** Horizontal gallery mobile - beginning */
 // Next/previous controls
 let slideIndex = 1;
@@ -346,19 +344,6 @@ document.getElementById("color-btn-1").onclick = () => {
 
 
 }
-
-// var first_click4 = true;
-// document.getElementById("color-btn-1").onclick = () => {
-//     if (first_click4) {
-//         document.getElementById('mobile-slide-1b-bw').style.opacity = "1";
-
-//         first_click4 = false;
-//     } else {
-//         document.getElementById('mobile-slide-1b-bw').style.opacity = "0";
-
-//         first_click4 = true;
-//     }
-// }
 
 
 var first_click3 = true;
