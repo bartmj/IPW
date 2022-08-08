@@ -23,7 +23,7 @@ body {
 	background-repeat: no-repeat;
 	z-index: 10;
 	background-size: cover;
-	display: none;
+
 }
 
 #mobile-slide-1-bw {
@@ -36,7 +36,7 @@ body {
 	opacity: 0;
 	transition: 2s;
 	background-size: cover;
-	display: none;
+
 
 }
 
@@ -84,6 +84,11 @@ body {
 }
 
 /* Chocimska */
+
+.swiper {
+	width: 600px;
+	height: 300px;
+}
 
 #mobile-sliders {
 	height: 320px;
