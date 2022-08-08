@@ -297,11 +297,11 @@ document.getElementById('map-btn-2').onclick = function () {
 var first_click2 = true;
 document.getElementById("color-btn-1").onclick = () => {
     if (first_click2) {
-        document.getElementById('mobile-slide-1bw').style.opacity = "1";
+        document.getElementById('mobile-slide-1-bw').style.opacity = "1";
 
         first_click2 = false;
     } else {
-        document.getElementById('mobile-slide-1bw').style.opacity = "0";
+        document.getElementById('mobile-slide-1-bw').style.opacity = "0";
 
         first_click2 = true;
     }
