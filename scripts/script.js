@@ -301,6 +301,7 @@ function plusSlidesMobile(n) {
     showSlides(slideIndex += n);
 }
 
+var slideNumber1 = 0;
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mobile-slider-1");
@@ -311,20 +312,39 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
+    slideNumber1 = slideIndex - 1
     //   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 /** Horizontal gallery mobile - end */
 var first_click2 = true;
+var first_click4 = true;
 document.getElementById("color-btn-1").onclick = () => {
-    if (first_click2) {
-        document.getElementById('mobile-slide-1-bw').style.opacity = "1";
+    if (slideNumber1 == 0) {
+        if (first_click2) {
+            document.getElementById('mobile-slide-1-bw').style.opacity = "1";
 
-        first_click2 = false;
-    } else {
-        document.getElementById('mobile-slide-1-bw').style.opacity = "0";
+            first_click2 = false;
+        } else {
+            document.getElementById('mobile-slide-1-bw').style.opacity = "0";
 
-        first_click2 = true;
+            first_click2 = true;
+        }
     }
+
+    if (slideNumber1 == 1) {
+
+        if (first_click4) {
+            document.getElementById('mobile-slide-1b-bw').style.opacity = "1";
+
+            first_click4 = false;
+        } else {
+            document.getElementById('mobile-slide-1b-bw').style.opacity = "0";
+
+            first_click4 = true;
+        }
+    }
+
+
 }
 
 // var first_click4 = true;
