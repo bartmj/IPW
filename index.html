@@ -9,19 +9,47 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/styles-mobile.css">
     <link rel="stylesheet" href="./styles/styles-slides.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
     <!-- Mobile -->
     <section class="mobile-container">
-        <div id="mobile-logo"></div>
-        <div>
-            <h4 class="mobile-point-title">Plac Unii Lubelskiej</h4>
+        <div id="mobile-logo"></div><!-- Mobile Logo -->
+        <h4 class="mobile-point-title">Plac Unii Lubelskiej</h4>
 
-            <div id="mobile-sliders">
-                <div id="mobile-slide-1"></div>
-                <div id="mobile-slide-1bw"></div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div id="mobile-sliders" class="swiper-slide">
+                    <div id="mobile-slide-1"></div>
+                    <div id="mobile-slide-1-bw"></div>
+                </div>
+                <div id="mobile-sliders" class="swiper-slide">
+                    <div id="mobile-slide-1b"></div>
+                    <div id="mobile-slide-1b-bw"></div>
+                </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+
+
+
+
+
+
+        <div>
             <div id="opacity-btn-container">
                 <button id="map-btn-1" class="opacity-button">Mapa</button>
                 <button id="color-btn-1" class="opacity-button">Kolor +/-</button>
@@ -182,6 +210,7 @@
         </div>
         <!--Button container-->
         <script src="./scripts/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     </section>
 </body>
 

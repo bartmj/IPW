@@ -298,11 +298,9 @@ var first_click2 = true;
 document.getElementById("color-btn-1").onclick = () => {
     if (first_click2) {
         document.getElementById('mobile-slide-1bw').style.opacity = "1";
-
         first_click2 = false;
     } else {
         document.getElementById('mobile-slide-1bw').style.opacity = "0";
-
         first_click2 = true;
     }
 }
@@ -312,11 +310,14 @@ var first_click3 = true;
 document.getElementById("color-btn-2").onclick = () => {
     if (first_click3) {
         document.getElementById('mobile-slide-2bw').style.opacity = "1";
-
         first_click3 = false;
     } else {
         document.getElementById('mobile-slide-2bw').style.opacity = "0";
-
         first_click3 = true;
     }
 }
+
+
+
+
+

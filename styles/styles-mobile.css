@@ -23,10 +23,34 @@ body {
 	background-repeat: no-repeat;
 	z-index: 10;
 	background-size: cover;
+	display: none;
 }
 
-#mobile-slide-1bw {
+#mobile-slide-1-bw {
 	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
+	background-position: center center;
+	top: -320px;
+	position: relative;
+	height: 320px;
+	background-repeat: no-repeat;
+	opacity: 0;
+	transition: 2s;
+	background-size: cover;
+	display: none;
+
+}
+
+#mobile-slide-1b {
+	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ WIDOK\ NA\ POŁUDNIE\ HIGH\ RES.jpg');
+	background-position: center center;
+	height: 320px;
+	background-repeat: no-repeat;
+	z-index: 10;
+	background-size: cover;
+}
+
+#mobile-slide-1b-bw {
+	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ WIDOK\ NA\ POŁUDNIE\ HIGH\ RES\ BW.jpg');
 	background-position: center center;
 	top: -320px;
 	position: relative;
