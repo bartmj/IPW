@@ -320,3 +320,13 @@ document.getElementById("color-btn-2").onclick = () => {
         first_click3 = true;
     }
 }
+
+document.getElementById('m-slides-1').onclick = () => {
+    document.getElementById('m-slides-1').style.display = 'none';
+    document.getElementById('m-slides-2').style.display = 'block';
+}
+
+document.getElementById('m-slides-2').onclick = () => {
+    document.getElementById('m-slides-2').style.display = 'none';
+    document.getElementById('m-slides-1').style.display = 'block';
+}

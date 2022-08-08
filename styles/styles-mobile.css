@@ -58,6 +58,10 @@ body {
 	background-size: cover;
 }
 
+#m-slides-2 {
+	display: none;
+}
+
 /* Chocimska */
 #mobile-slide-2 {
 	background-image: url('../img/Chocimska/CHOCIMSKA\ A1\ KOLOR.png');
