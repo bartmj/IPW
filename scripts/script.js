@@ -249,9 +249,6 @@ if (window.innerWidth > 760) {
     animateLogo();
 }
 
-mapBtn.onclick = () => {
-
-}
 
 var first_click = true;
 mapBtn.onclick = function () {
@@ -294,6 +291,29 @@ document.getElementById('map-btn-2').onclick = function () {
 }
 
 
+
+/** Horizontal gallery mobile - beginning */
+// Next/previous controls
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlidesMobile(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mobile-slider-1");
+    //   let captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+    //   captionText.innerHTML = dots[slideIndex-1].alt;
+}
+/** Horizontal gallery mobile - end */
 var first_click2 = true;
 document.getElementById("color-btn-1").onclick = () => {
     if (first_click2) {
@@ -306,6 +326,19 @@ document.getElementById("color-btn-1").onclick = () => {
         first_click2 = true;
     }
 }
+
+// var first_click4 = true;
+// document.getElementById("color-btn-1").onclick = () => {
+//     if (first_click4) {
+//         document.getElementById('mobile-slide-1b-bw').style.opacity = "1";
+
+//         first_click4 = false;
+//     } else {
+//         document.getElementById('mobile-slide-1b-bw').style.opacity = "0";
+
+//         first_click4 = true;
+//     }
+// }
 
 
 var first_click3 = true;
@@ -321,12 +354,19 @@ document.getElementById("color-btn-2").onclick = () => {
     }
 }
 
-document.getElementById('m-slides-1').onclick = () => {
-    document.getElementById('m-slides-1').style.display = 'none';
-    document.getElementById('m-slides-2').style.display = 'block';
-}
 
-document.getElementById('m-slides-2').onclick = () => {
-    document.getElementById('m-slides-2').style.display = 'none';
-    document.getElementById('m-slides-1').style.display = 'block';
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

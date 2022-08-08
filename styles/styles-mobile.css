@@ -56,10 +56,7 @@ body {
 	opacity: 0;
 	transition: 2s;
 	background-size: cover;
-}
 
-#m-slides-2 {
-	display: none;
 }
 
 /* Chocimska */
@@ -86,7 +83,7 @@ body {
 
 /* Chocimska */
 
-.mobile-sliders {
+.mobile-slider-1 {
 	height: 320px;
 }
 
