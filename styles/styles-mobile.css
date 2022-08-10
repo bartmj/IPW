@@ -17,25 +17,29 @@ body {
 }
 
 #mobile-slide-1 {
-	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
+	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
 	background-position: center center;
 	height: 320px;
 	background-repeat: no-repeat;
 	z-index: 10;
 	background-size: cover;
+
 }
 
-#mobile-slide-1bw {
-	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
+#mobile-slide-1-bw {
+	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
 	background-position: center center;
 	top: -320px;
 	position: relative;
 	height: 320px;
 	background-repeat: no-repeat;
-	opacity: 0;
 	transition: 2s;
 	background-size: cover;
+	z-index: 3;
+
 }
+
+
 
 /* Chocimska */
 #mobile-slide-2 {

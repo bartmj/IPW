@@ -320,3 +320,7 @@ document.getElementById("color-btn-2").onclick = () => {
         first_click3 = true;
     }
 }
+
+document.getElementById("test").onclick = () => {
+    document.getElementById('mobile-slide-1-bw').style.width = '50%'
+}
