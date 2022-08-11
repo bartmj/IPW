@@ -80,7 +80,7 @@ toggleOpacity = () => {
 /** Waypoints - beginning */
 window.addEventListener('scroll', () => {
     let topOffset = window.pageYOffset
-
+    windowHeight = window.innerHeight
     if (topOffset < (windowHeight / 2)) {
         wayPoint(0)
         showButtons()
