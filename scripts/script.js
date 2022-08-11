@@ -235,11 +235,10 @@ function writeSlowly(string) {
         }, i * 50)
     }
 }
-const o = "№";
 
 function animateLogo() {
     setTimeout(() => {
-        writeSlowly(`Trasa ${o} 1 - Mokotów Skarpa`);
+        writeSlowly(`Trasa №1 - Mokotów Skarpa`);
     }, 1000)
 }
 /** Animate logo */
