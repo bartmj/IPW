@@ -11,12 +11,12 @@ const slidesPair5 = document.getElementsByClassName('slides6')
 const slidesPair6 = document.getElementsByClassName('slides7')
 const slidesPair7 = document.getElementsByClassName('slides8')
 const slidesPair8 = document.getElementsByClassName('slides9')
-// Iframe
-const iframe = document.getElementById('iframe-a')
-// Iframe
-// Map Button
+const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
+    slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
+// Mobile map buttons
 const mapBtn = document.getElementById('map-btn-1')
-// Map Button
+const mapBtn2 = document.getElementById('map-btn-2')
+// Mobile map buttons
 // Resize event
 /** */
 let windowHeight = window.innerHeight
@@ -29,8 +29,7 @@ window.addEventListener('resize', (event) => {
 });
 // Resize event
 /** */
-const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
-    slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
+
 const waypoints = [true, false, false, false, false, false, false, false, false]
 const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 
@@ -81,7 +80,7 @@ toggleOpacity = () => {
 /** Waypoints - beginning */
 window.addEventListener('scroll', () => {
     let topOffset = window.pageYOffset
-
+    windowHeight = window.innerHeight
     if (topOffset < (windowHeight / 2)) {
         wayPoint(0)
         showButtons()
@@ -235,143 +234,66 @@ function writeSlowly(string) {
         }, i * 50)
     }
 }
-const o = "№";
 
 function animateLogo() {
     setTimeout(() => {
-        writeSlowly(`Trasa ${o} 1 - Mokotów Skarpa`);
+        writeSlowly(`Trasa №1 - Mokotów Skarpa`);
     }, 1000)
 }
 /** Animate logo */
-
 
 if (window.innerWidth > 760) {
     animateLogo();
 }
 
-
 var first_click = true;
+const iframeA = document.getElementById('iframe-a')
 mapBtn.onclick = function () {
     if (first_click) {
-        iframe.style.opacity = "1"
-        iframe.style.top = "0"
-        iframe.style.height = "320px"
-        iframe.style.marginBottom = "1em"
-        document.getElementById('iframe-a').style.zIndex = "10"
+        showMap(iframeA)
         first_click = false;
     } else {
-        iframe.style.opacity = "0"
-        iframe.style.top = "1"
-        iframe.style.height = "0px"
-        iframe.style.marginBottom = "0em"
-        document.getElementById('iframe-a').style.zIndex = "-1"
+        hideMap(iframeA)
         first_click = true;
     }
 }
 
-
 var first_click3 = true;
 const iframeB = document.getElementById('iframe-b')
-document.getElementById('map-btn-2').onclick = function () {
+mapBtn2.onclick = function () {
     if (first_click3) {
-        iframeB.style.opacity = "1"
-        iframeB.style.top = "0"
-        iframeB.style.height = "320px"
-        iframeB.style.marginBottom = "1em"
-        iframeB.style.zIndex = "10"
+        showMap(iframeB)
         first_click3 = false;
     } else {
-        iframeB.style.opacity = "0"
-        iframeB.style.top = "1"
-        iframeB.style.height = "0px"
-        iframeB.style.marginBottom = "0em"
-        iframeB.style.zIndex = "-1"
-        first_click3 = true;
-    }
-}
-
-/** Horizontal gallery mobile - beginning */
-// Next/previous controls
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlidesMobile(n) {
-    showSlides(slideIndex += n);
-}
-
-var slideNumber1 = 0;
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mobile-slider-1");
-    //   let captionText = document.getElementById("caption");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-    slideNumber1 = slideIndex - 1
-    //   captionText.innerHTML = dots[slideIndex-1].alt;
-}
-/** Horizontal gallery mobile - end */
-var first_click2 = true;
-var first_click4 = true;
-document.getElementById("color-btn-1").onclick = () => {
-    if (slideNumber1 == 0) {
-        if (first_click2) {
-            document.getElementById('mobile-slide-1-bw').style.opacity = "1";
-
-            first_click2 = false;
-        } else {
-            document.getElementById('mobile-slide-1-bw').style.opacity = "0";
-
-            first_click2 = true;
-        }
-    }
-
-    if (slideNumber1 == 1) {
-
-        if (first_click4) {
-            document.getElementById('mobile-slide-1b-bw').style.opacity = "1";
-
-            first_click4 = false;
-        } else {
-            document.getElementById('mobile-slide-1b-bw').style.opacity = "0";
-
-            first_click4 = true;
-        }
-    }
-
-
-}
-
-
-var first_click3 = true;
-document.getElementById("color-btn-2").onclick = () => {
-    if (first_click3) {
-        document.getElementById('mobile-slide-2bw').style.opacity = "1";
-
-        first_click3 = false;
-    } else {
-        document.getElementById('mobile-slide-2bw').style.opacity = "0";
-
+        hideMap(iframeB)
         first_click3 = true;
     }
 }
 
 
+function hideMap(frame) {
+    frame.style.opacity = "0"
+    frame.style.top = "1"
+    frame.style.height = "0px"
+    frame.style.marginBottom = "0em"
+    frame.style.zIndex = "-1"
 
+}
 
+function showMap(frame) {
+    frame.style.opacity = "1"
+    frame.style.top = "0"
+    frame.style.height = "320px"
+    frame.style.marginBottom = "1em"
+    frame.style.zIndex = "10"
+}
 
+document.getElementById("next").addEventListener("click", () => {
+    document.getElementById("m-img-1").src = "img/Plac_Unii/[ACC] PL UNII WIDOK NA POŁUDNIE HIGH RES.jpg"
+    document.getElementById("m-img-2").src = "img/Plac_Unii/[ACC] PL UNII WIDOK NA POŁUDNIE HIGH RES BW.jpg"
+})
 
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById("prev").addEventListener("click", () => {
+    document.getElementById("m-img-1").src = "img/Plac_Unii/PL UNII KOLOR.jpg"
+    document.getElementById("m-img-2").src = "img/Plac_Unii/[ACC] PL UNII HIGH RES NATURAL BW.jpg"
+})
