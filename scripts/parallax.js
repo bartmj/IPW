@@ -5,13 +5,28 @@ tl.fromTo(".after-img", { xPercent: 100, x: 0 }, { xPercent: 0 })
 tl.pause();
 var first_click = true;
 
-document.getElementById("outer-section").addEventListener("touchstart", event => {
-    event.preventDefault();
-    tl.play();
-})
-
-document.getElementById("outer-section").addEventListener("touchend", event => {
+var oldXPos = null
+var xPos = null
+document.getElementById("outer-section").addEventListener("touchmove", event => {
     event.preventDefault();
 
-    tl.reverse()
+    oldXPos = xPos
+    xPos = event.touches[0].clientX
+
+    if (oldXPos > xPos) {
+        tl.play();
+    } else {
+        tl.reverse()
+
+    }
 })
+
+// document.getElementById("outer-section").addEventListener("touchmove", event => {
+//     event.preventDefault();
+//     oldXPos = xPos
+//     xPos = event.touches[0].clientX
+
+//     if (oldXPos > xPos) {
+//     }
+
+// })
