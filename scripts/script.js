@@ -285,3 +285,13 @@ function showMap(frame) {
     frame.style.marginBottom = "1em"
     frame.style.zIndex = "10"
 }
+
+document.getElementById("next").addEventListener("click", () => {
+    document.getElementById("m-img-1").src = "img/Plac_Unii/[ACC] PL UNII WIDOK NA POŁUDNIE HIGH RES.jpg"
+    document.getElementById("m-img-2").src = "img/Plac_Unii/[ACC] PL UNII WIDOK NA POŁUDNIE HIGH RES BW.jpg"
+})
+
+document.getElementById("prev").addEventListener("click", () => {
+    document.getElementById("m-img-1").src = "img/Plac_Unii/PL UNII KOLOR.jpg"
+    document.getElementById("m-img-2").src = "img/Plac_Unii/[ACC] PL UNII HIGH RES NATURAL BW.jpg"
+})
