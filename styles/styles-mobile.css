@@ -3,7 +3,6 @@
 	font-family: 'Euclid Flex';
 	src: url('../fonts/@font-face/7ca06963c2e0a99b0a44cad7b4f84ba6.woff2') format('woff2'),
 		url('../fonts/@font-face/7ca06963c2e0a99b0a44cad7b4f84ba6.woff') format('woff');
-
 }
 
 .container {
@@ -11,30 +10,6 @@
 	justify-content: center;
 	flex-wrap: wrap;
 }
-
-#mobile-slide-1 {
-	background-image: url('../img/Plac_Unii/[ACC]\ PL\ UNII\ HIGH\ RES\ NATURAL\ BW.jpg');
-	background-position: center center;
-	height: 320px;
-	background-repeat: no-repeat;
-	z-index: 10;
-	background-size: cover;
-
-}
-
-#mobile-slide-1-bw {
-	background-image: url('../img/Plac_Unii/PL\ UNII\ KOLOR.jpg');
-	background-position: center center;
-	top: -320px;
-	position: relative;
-	height: 320px;
-	background-repeat: no-repeat;
-	transition: 2s;
-	background-size: cover;
-	z-index: 3;
-
-}
-
 
 /* Chocimska */
 #mobile-slide-2 {

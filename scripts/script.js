@@ -122,9 +122,6 @@ function showButtons() {
 }
 /** */
 function wayPoint(n) {
-    /** This if statement makes the waypoints trigger only once, and not on every offset in a given scroll range. 
-     * Initially, waypoints are false.
-    */
     if (waypoints[n] === false) {
         // console.log("waypoint");
         deactivateAllSlidePairs()
@@ -132,7 +129,6 @@ function wayPoint(n) {
         activateSideMenuLi(n)
 
     }
-    /** After all the functions inside the if statement are invoked, a waypoint is set to true. */
     setWaypoint(n)
 }
 /** */
@@ -156,7 +152,6 @@ const li7 = document.getElementById('nav-li-7')
 const li8 = document.getElementById('nav-li-8')
 const li9 = document.getElementById('nav-li-9')
 const allLiItems = [li1, li2, li3, li4, li5, li6, li7, li8, li9]
-
 
 function activateSideMenuLi(n) {
     for (let i = 0; i < allLiItems.length; i++) {
@@ -222,7 +217,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 /** Keyboard events - end */
-
 
 /** Animate logo */
 let br = document.createElement("br")
