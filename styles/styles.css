@@ -9,8 +9,14 @@
 /** Body */
 body {
 	font-family: 'Euclid Flex', 'Merriweather Sans', sans-serif;
-	overflow-x: hidden;
 }
+
+html,
+body {
+	width: auto !important;
+	overflow-x: hidden !important
+}
+
 
 /* html {
     scroll-behavior: smooth;
