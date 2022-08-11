@@ -10,7 +10,7 @@ document.getElementById("outer-section").addEventListener("touchstart", event =>
     tl.play();
 })
 
-document.getElementById("outer-section").addEventListener("touchmove", event => {
+document.getElementById("outer-section").addEventListener("touchend", event => {
     event.preventDefault();
 
     tl.reverse()
