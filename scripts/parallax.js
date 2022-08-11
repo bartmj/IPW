@@ -20,13 +20,3 @@ document.getElementById("outer-section").addEventListener("touchmove", event => 
 
     }
 })
-
-// document.getElementById("outer-section").addEventListener("touchmove", event => {
-//     event.preventDefault();
-//     oldXPos = xPos
-//     xPos = event.touches[0].clientX
-
-//     if (oldXPos > xPos) {
-//     }
-
-// })
