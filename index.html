@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/styles-mobile.css">
     <link rel="stylesheet" href="./styles/styles-slides.css">
+    <link rel="stylesheet" href="./styles/parallax.css">
+
 </head>
 
 <body>
@@ -18,15 +20,23 @@
         <div>
             <h4 class="mobile-point-title">Plac Unii Lubelskiej</h4>
 
-            <div id="mobile-sliders">
+            <!-- <div id="mobile-sliders">
                 <div id="mobile-slide-1"></div>
                 <div id="mobile-slide-1-bw"></div>
+            </div> -->
+            <div class="after-before-section">
+                <div class="img-row before-img">
+                    <img id="m-img-1" src="img/Plac_Unii/PL UNII KOLOR.jpg" />
+                </div>
+                <div class="img-row after-img">
+                    <img id="m-img-2" src="img/Plac_Unii/[ACC] PL UNII HIGH RES NATURAL BW.jpg" />
+                </div>
             </div>
 
             <div id="opacity-btn-container">
-                <button id="test" class="opacity-button">TEST</button>
+                <button id="prev" class="opacity-button">&lt;</button>
                 <button id="map-btn-1" class="opacity-button">Mapa</button>
-                <button id="color-btn-1" class="opacity-button">Kolor +/-</button>
+                <button id="next" class="opacity-button">&gt;</button>
             </div>
 
             <div id="iframe-a">
@@ -184,6 +194,8 @@
         </div>
         <!--Button container-->
         <script src="./scripts/script.js"></script>
+        <script src="./scripts/parallax.js"></script>
+
     </section>
 </body>
 
