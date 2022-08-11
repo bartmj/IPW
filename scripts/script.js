@@ -11,12 +11,12 @@ const slidesPair5 = document.getElementsByClassName('slides6')
 const slidesPair6 = document.getElementsByClassName('slides7')
 const slidesPair7 = document.getElementsByClassName('slides8')
 const slidesPair8 = document.getElementsByClassName('slides9')
-// Iframe
-const iframe = document.getElementById('iframe-a')
-// Iframe
-// Map Button
+const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
+    slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
+// Mobile map buttons
 const mapBtn = document.getElementById('map-btn-1')
-// Map Button
+const mapBtn2 = document.getElementById('map-btn-2')
+// Mobile map buttons
 // Resize event
 /** */
 let windowHeight = window.innerHeight
@@ -29,8 +29,7 @@ window.addEventListener('resize', (event) => {
 });
 // Resize event
 /** */
-const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
-    slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
+
 const waypoints = [true, false, false, false, false, false, false, false, false]
 const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 
@@ -243,51 +242,46 @@ function animateLogo() {
 }
 /** Animate logo */
 
-
 if (window.innerWidth > 760) {
     animateLogo();
 }
 
-mapBtn.onclick = () => {
-
-}
-
 var first_click = true;
+const iframeA = document.getElementById('iframe-a')
 mapBtn.onclick = function () {
     if (first_click) {
-        iframe.style.opacity = "1"
-        iframe.style.top = "0"
-        iframe.style.height = "320px"
-        iframe.style.marginBottom = "1em"
-        document.getElementById('iframe-a').style.zIndex = "10"
+        showMap(iframeA)
         first_click = false;
     } else {
-        iframe.style.opacity = "0"
-        iframe.style.top = "1"
-        iframe.style.height = "0px"
-        iframe.style.marginBottom = "0em"
-        document.getElementById('iframe-a').style.zIndex = "-1"
+        hideMap(iframeA)
         first_click = true;
     }
 }
 
-
 var first_click3 = true;
 const iframeB = document.getElementById('iframe-b')
-document.getElementById('map-btn-2').onclick = function () {
+mapBtn2.onclick = function () {
     if (first_click3) {
-        iframeB.style.opacity = "1"
-        iframeB.style.top = "0"
-        iframeB.style.height = "320px"
-        iframeB.style.marginBottom = "1em"
-        iframeB.style.zIndex = "10"
+        showMap(iframeB)
         first_click3 = false;
     } else {
-        iframeB.style.opacity = "0"
-        iframeB.style.top = "1"
-        iframeB.style.height = "0px"
-        iframeB.style.marginBottom = "0em"
-        iframeB.style.zIndex = "-1"
+        hideMap(iframeB)
         first_click3 = true;
     }
+}
+
+function hideMap(frame) {
+    frame.style.opacity = "0"
+    frame.style.top = "1"
+    frame.style.height = "0px"
+    frame.style.marginBottom = "0em"
+    frame.style.zIndex = "-1"
+}
+
+function showMap(frame) {
+    frame.style.opacity = "1"
+    frame.style.top = "0"
+    frame.style.height = "320px"
+    frame.style.marginBottom = "1em"
+    frame.style.zIndex = "10"
 }
