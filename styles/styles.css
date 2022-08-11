@@ -9,13 +9,13 @@
 /** Body */
 body {
 	font-family: 'Euclid Flex', 'Merriweather Sans', sans-serif;
-	/* overflow-x: hidden; */
+	overflow-x: hidden;
 }
 
-/** HTML */
 /* html {
     scroll-behavior: smooth;
 } */
+
 #mobile {
 	display: none;
 }
