@@ -1,10 +1,7 @@
 body {
-    position: relative;
+    /* position: relative;
     margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-
-
+    padding: 0; */
 }
 
 .full-section {
@@ -30,11 +27,11 @@ body {
     position: absolute;
     overflow: hidden;
     top: 0;
-    transform: translate(50%, 0)
+    transform: translate(100%, 0)
 }
 
 .after-img img {
-    transform: translate(50%, 0)
+    transform: translate(100%, 0)
 }
 
 .after-before-section {

@@ -8,6 +8,8 @@
 
 body {
 	font-family: 'Euclid Flex';
+	overflow-x: hidden;
+
 }
 
 .container {
