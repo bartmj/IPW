@@ -51,3 +51,23 @@ document.getElementById("prev").addEventListener("click", () => {
     mobileImg1.src = "img/Plac_Unii/PL UNII KOLOR.jpg"
     mobileImg2.src = "img/Plac_Unii/[ACC] PL UNII HIGH RES NATURAL BW.jpg"
 })
+
+// document.getElementById("hamburger").addEventListener("click", () => {
+//     document.getElementById("mobile-menu").style.display = "block";
+// })
+
+// Hamburger
+
+var first_click4 = true;
+var hamburgers = document.querySelectorAll(".hamburger");
+hamburgers[0].addEventListener("click", function () {
+
+    if (first_click4) {
+        document.getElementById("mobile-menu").style.display = "block";
+        first_click4 = false;
+    } else {
+        document.getElementById("mobile-menu").style.display = "none";
+        first_click4 = true;
+    }
+    this.classList.toggle("is-active");
+}, false);

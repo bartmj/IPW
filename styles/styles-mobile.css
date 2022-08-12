@@ -106,28 +106,29 @@
 	background-size: contain;
 	height: 12vw;
 	max-width: 420px;
-	max-height: 72px;
 	background-image: url('../img/IPW_logo.gif');
-	right: 0;
+	/* right: 0; */
 	background-repeat: no-repeat;
-	background-position: right;
-	margin: 1.5em 2em 0em 2.5em;
-	padding-right: 0.5em;
+	background-position: center center;
+	/* margin: 1.5em 2em 0em 2.5em; */
+	/* padding-right: 0.5em; */
+	display: flex;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	align-self: center;
 }
 
-#mobile-menu {
+#mobile-nav {
 	display: grid;
 	grid-template-columns: repeat(2, 50vw);
 }
 
-#hamburger {
-	background-image: url('../img/Hamburger_icon.png');
-	background-size: 24px;
-	opacity: 0.50;
-	width: 24px;
-	height: 24px;
-	background-repeat: no-repeat;
+#mobile-menu {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
 	z-index: 200;
-	align-self: center;
-	margin: 1em 1em 0 2em;
+	opacity: 0.8;
 }

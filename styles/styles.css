@@ -133,7 +133,7 @@ button {
 }
 
 #animated-con {
-	display: flexbox;
+	display: flex;
 	position: fixed;
 	z-index: 6;
 	right: 84px;
