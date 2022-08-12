@@ -59,18 +59,6 @@
 	text-align: justify;
 }
 
-#mobile-logo {
-	background-size: contain;
-	height: 12vw;
-	max-height: 72px;
-	background-image: url('../img/IPW_logo.gif');
-	right: 0;
-	background-repeat: no-repeat;
-	background-position: right;
-	margin-top: 1em;
-	margin-right: 1em;
-}
-
 #iframe-a {
 	position: relative;
 	top: -320px;
@@ -107,4 +95,38 @@
 	margin: 0 0.5em;
 	align-self: center;
 	font-family: 'Euclid Flex', 'Merriweather Sans', sans-serif;
+}
+
+/* 
+
+
+*/
+
+#mobile-logo {
+	background-size: contain;
+	height: 12vw;
+	max-width: 280px;
+	max-height: 72px;
+	background-image: url('../img/IPW_logo.gif');
+	right: 0;
+	background-repeat: no-repeat;
+	background-position: right;
+	margin-top: 1em;
+	margin-right: 1em;
+}
+
+#mobile-menu {
+	display: grid;
+	grid-template-columns: repeat(2, 50vw);
+}
+
+#hamburger {
+	background-image: url('/img/Hamburger_icon.png');
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	z-index: 999;
+	align-self: center;
+	margin: 2em;
 }
