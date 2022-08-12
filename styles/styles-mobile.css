@@ -123,7 +123,7 @@
 #hamburger {
 	background-image: url('/img/Hamburger_icon.png');
 	background-size: 24px;
-	opacity: 0.50;
+	/* opacity: 0.50; */
 	width: 24px;
 	height: 24px;
 	background-repeat: no-repeat;
