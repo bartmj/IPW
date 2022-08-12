@@ -1,3 +1,7 @@
+const mobileMenu = document.getElementById("mobile-menu");
+
+mobileMenu.style.display = "none";
+
 var first_click = true;
 const iframeA = document.getElementById('iframe-a')
 mapBtn.onclick = function () {
@@ -63,10 +67,10 @@ var hamburgers = document.querySelectorAll(".hamburger");
 hamburgers[0].addEventListener("click", function () {
 
     if (first_click4) {
-        document.getElementById("mobile-menu").style.display = "block";
+        mobileMenu.style.display = "block";
         first_click4 = false;
     } else {
-        document.getElementById("mobile-menu").style.display = "none";
+        mobileMenu.style.display = "none";
         first_click4 = true;
     }
     this.classList.toggle("is-active");
