@@ -2,17 +2,19 @@ const opacityButton = document.getElementById('opacity-button')
 const prevButton = document.getElementById('prev-button')
 const nextButton = document.getElementById('next-button')
 
-const slidesPair0 = document.getElementsByClassName('slides1')
-const slidesPair1 = document.getElementsByClassName('slides2')
-const slidesPair2 = document.getElementsByClassName('slides3')
-const slidesPair3 = document.getElementsByClassName('slides4')
-const slidesPair4 = document.getElementsByClassName('slides5')
-const slidesPair5 = document.getElementsByClassName('slides6')
-const slidesPair6 = document.getElementsByClassName('slides7')
-const slidesPair7 = document.getElementsByClassName('slides8')
-const slidesPair8 = document.getElementsByClassName('slides9')
-const allSlidesPairs = [slidesPair0, slidesPair1, slidesPair2, slidesPair3,
-    slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8]
+const slidesPair1 = document.getElementsByClassName('slides1')
+const slidesPair2 = document.getElementsByClassName('slides2')
+const slidesPair3 = document.getElementsByClassName('slides3')
+const slidesPair4 = document.getElementsByClassName('slides4')
+const slidesPair5 = document.getElementsByClassName('slides5')
+const slidesPair6 = document.getElementsByClassName('slides6')
+const slidesPair7 = document.getElementsByClassName('slides7')
+const slidesPair8 = document.getElementsByClassName('slides8')
+const slidesPair9 = document.getElementsByClassName('slides9')
+const slidesPair10 = document.getElementsByClassName('slides10')
+
+const allSlidesPairs = [slidesPair1, slidesPair2, slidesPair3,
+    slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8, slidesPair9, slidesPair10]
 // Mobile map buttons
 const mapBtn = document.getElementById('map-btn-1')
 const mapBtn2 = document.getElementById('map-btn-2')
@@ -30,8 +32,8 @@ window.addEventListener('resize', (event) => {
 // Resize event
 /** */
 
-const waypoints = [true, false, false, false, false, false, false, false, false]
-const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+const waypoints = [true, false, false, false, false, false, false, false, true, false]
+const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 const photoNr = document.getElementById('photo-count')
 /** */
@@ -98,15 +100,18 @@ window.addEventListener('scroll', () => {
         disappearButtons()
     } else if (topOffset > (windowHeight * 4.5) && (topOffset < (windowHeight * 5.5))) {
         wayPoint(5)
-        showButtons()
+        disappearButtons()
     } else if (topOffset > (windowHeight * 5.5) && (topOffset < (windowHeight * 6.5))) {
         wayPoint(6)
-        disappearButtons()
+        showButtons()
     } else if (topOffset > (windowHeight * 6.5) && (topOffset < (windowHeight * 7.5))) {
         wayPoint(7)
         disappearButtons()
     } else if (topOffset > (windowHeight * 7.5) && (topOffset < (windowHeight * 8.5))) {
         wayPoint(8)
+        disappearButtons()
+    } else if (topOffset > (windowHeight * 8.5) && (topOffset < (windowHeight * 9.5))) {
+        wayPoint(9)
         showButtons()
     }
 })
@@ -151,7 +156,8 @@ const li6 = document.getElementById('nav-li-6')
 const li7 = document.getElementById('nav-li-7')
 const li8 = document.getElementById('nav-li-8')
 const li9 = document.getElementById('nav-li-9')
-const allLiItems = [li1, li2, li3, li4, li5, li6, li7, li8, li9]
+const li10 = document.getElementById('nav-li-10')
+const allLiItems = [li1, li2, li3, li4, li5, li6, li7, li8, li9, li10]
 
 function activateSideMenuLi(n) {
     for (let i = 0; i < allLiItems.length; i++) {
@@ -194,6 +200,7 @@ li6.onclick = () => { scrollTo(windowHeight * 5) }
 li7.onclick = () => { scrollTo(windowHeight * 6) }
 li8.onclick = () => { scrollTo(windowHeight * 7) }
 li9.onclick = () => { scrollTo(windowHeight * 8) }
+li10.onclick = () => { scrollTo(windowHeight * 9) }
 
 function scrollTo(n) {
     window.scroll({ top: n, behavior: "smooth" })
