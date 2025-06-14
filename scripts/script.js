@@ -14,11 +14,15 @@ const slidesPair8 = document.getElementsByClassName('slides8')
 const slidesPair9 = document.getElementsByClassName('slides9')
 const slidesPair10 = document.getElementsByClassName('slides10')
 
+const slideNow = document.getElementById('slide2-now')
+
 const allSlidesPairs = [slidesPair1, slidesPair2, slidesPair3,
     slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8, slidesPair9, slidesPair10]
 
 // Wstępne wygaszenie przycisku
 futureButton.style.display = 'none'
+// Wstępne wygaszenie slajdu 
+slideNow.style.display ='none'
 // Mobile map buttons
 const mapBtn = document.getElementById('map-btn-1')
 const mapBtn2 = document.getElementById('map-btn-2')
@@ -35,7 +39,6 @@ window.addEventListener('resize', (event) => {
 });
 // Resize event
 /** */
-
 const waypoints = [true, false, false, false, false, false, false, false, true, false]
 const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
@@ -43,9 +46,20 @@ const photoNr = document.getElementById('photo-count')
 /** */
 /** Horizontal gallery - beginning */
 function plusSlides(n) {
-    for (let i = 0; i < waypoints.length; i++) {
-        waypoints[i] == true ? showSlides(slideIndexes[i] += n, i) : null
-    }
+    waypoints.forEach((active, i) => {
+        if (active) {
+            slideIndexes[i] += n;
+            showSlides(slideIndexes[i], i);
+
+
+            if (slideIndexes[i] == 1) {
+                showButtons(futureButton)
+            } else {
+                hideButtons(futureButton)
+                
+            }
+        }
+    });
 }
 
 function showSlides(n, i) {
@@ -61,7 +75,6 @@ function showSlides(n, i) {
 
 }
 /** Horizontal gallery - end */
-
 /** Opacity button - beginning */
 opacityButton.onclick = () => {
     toggleOpacity()
@@ -95,24 +108,22 @@ const toggleFutureNow = () => {
     if (!futureNowActive) {
         // Włącz tryb "now" – pokazuje tylko slajd z "-now"
         Array.from(activeSlides).forEach(slide => {
-            if (slide.id.includes('-now')) {
-                slide.style.display = 'block'
-            } else {
-                slide.style.display = 'none'
-            }
+            slide.style.display = 'none'
         });
+        slideNow.style.display = 'block'
         futureNowActive = true
+        hideButtons(prevButton, nextButton, opacityButton)
     } else {
         // Wyłącz tryb "now" – pokaż wszystkie slajdy
         Array.from(activeSlides).forEach(slide => {
-            if (!slide.id.includes('-now')) {
-                slide.style.display = 'block'
-            } else {
-                slide.style.display = 'none'
-            }
+            slide.style.display = 'block'
         });
+        slideNow.style.display = 'none'
         futureNowActive = false
+        showButtons(prevButton, nextButton, opacityButton)
     }
+
+    
 }
 /** Future button - end */
 /** Waypoints - beginning */
@@ -124,7 +135,7 @@ window.addEventListener('scroll', () => {
         // PLAC UNII LUBELSKIEJ
         wayPoint(0)
         showButtons()
-        disappearButtons(futureButton)
+        hideButtons(futureButton)
     } else if ((topOffset > (windowHeight / 2)) && (topOffset < (windowHeight * 1.5))) {
         // ULICA CHOCIMSKA
         wayPoint(1)
@@ -132,20 +143,20 @@ window.addEventListener('scroll', () => {
     } else if (topOffset > (windowHeight * 1.5) && (topOffset < (windowHeight * 2.5))) {
         // PARK MORSKIE OKO
         wayPoint(2)
-        disappearButtons(prevButton, nextButton, futureButton)
+        hideButtons(prevButton, nextButton, futureButton)
     } else if (topOffset > (windowHeight * 2.5) && (topOffset < (windowHeight * 3.5))) {
         // PAŁAC SZUSTRA
         wayPoint(3)
-        disappearButtons(prevButton, nextButton)
+        hideButtons(prevButton, nextButton)
         showButtons(futureButton)
     } else if (topOffset > (windowHeight * 3.5) && (topOffset < (windowHeight * 4.5))) {
         // PROMENADA
         wayPoint(4)
-        disappearButtons(prevButton, nextButton, futureButton)
+        hideButtons(prevButton, nextButton, futureButton)
     } else if (topOffset > (windowHeight * 4.5) && (topOffset < (windowHeight * 5.5))) {
         // ULICA KONDUKTORSKA
         wayPoint(5)
-        disappearButtons(prevButton, nextButton)
+        hideButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 5.5) && (topOffset < (windowHeight * 6.5))) {
         // ULICA DOLNA
         wayPoint(6)
@@ -153,11 +164,11 @@ window.addEventListener('scroll', () => {
     } else if (topOffset > (windowHeight * 6.5) && (topOffset < (windowHeight * 7.5))) {
         // KLUB SPORTOWY WARSZAWIANKA
         wayPoint(7)
-        disappearButtons(prevButton, nextButton)
+        hideButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 7.5) && (topOffset < (windowHeight * 8.5))) {
         // KRÓLIKARNIA
         wayPoint(8)
-        disappearButtons(prevButton, nextButton)
+        hideButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 8.5) && (topOffset < (windowHeight * 9.5))) {
         // SKOCZNIA NARCIARSKA "SKARPA"
         wayPoint(9)
@@ -165,7 +176,7 @@ window.addEventListener('scroll', () => {
     }
 })
 /** */
-function disappearButtons(...buttons) {
+function hideButtons(...buttons) {
     buttons.forEach(btn => {
         if (btn) btn.style.display = 'none'
     })
