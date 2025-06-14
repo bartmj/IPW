@@ -53,17 +53,13 @@ function plusSlides(n) {
             slideIndexes[i] += n;
             showSlides(slideIndexes[i], i);
 
-            // 🔵 Logika pokazywania futureButton tylko na slajdzie 1 w konkretnym waypoincie
+            // Logika pokazywania futureButton tylko na slajdzie 1 w konkretnym waypoincie
             if (i === 1 && slideIndexes[i] === 1) {
                 showButtons(futureButton);
             } else {
                 hideButtons(futureButton);
             }
-            // if (slideIndexes[i] == 1) {
-            //     showButtons(futureButton)
-            // } else {
-            //     hideButtons(futureButton)
-            // }
+
         }
     });
 }
