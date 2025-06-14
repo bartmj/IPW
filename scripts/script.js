@@ -1,4 +1,5 @@
 const opacityButton = document.getElementById('opacity-button')
+const futureButton = document.getElementById('future-button')
 const prevButton = document.getElementById('prev-button')
 const nextButton = document.getElementById('next-button')
 
@@ -88,42 +89,42 @@ window.addEventListener('scroll', () => {
         showButtons()
     } else if ((topOffset > (windowHeight / 2)) && (topOffset < (windowHeight * 1.5))) {
         wayPoint(1)
-        showButtons()
+        showButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 1.5) && (topOffset < (windowHeight * 2.5))) {
         wayPoint(2)
-        disappearButtons()
+        disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 2.5) && (topOffset < (windowHeight * 3.5))) {
         wayPoint(3)
-        disappearButtons()
+        disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 3.5) && (topOffset < (windowHeight * 4.5))) {
         wayPoint(4)
-        disappearButtons()
+        disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 4.5) && (topOffset < (windowHeight * 5.5))) {
         wayPoint(5)
-        disappearButtons()
+        disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 5.5) && (topOffset < (windowHeight * 6.5))) {
         wayPoint(6)
-        showButtons()
+        showButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 6.5) && (topOffset < (windowHeight * 7.5))) {
         wayPoint(7)
-        disappearButtons()
+        disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 7.5) && (topOffset < (windowHeight * 8.5))) {
         wayPoint(8)
-        disappearButtons()
+        disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 8.5) && (topOffset < (windowHeight * 9.5))) {
         wayPoint(9)
-        showButtons()
+        showButtons(prevButton, nextButton)
     }
 })
 /** */
-function disappearButtons() {
-    prevButton.style.opacity = '0'
-    nextButton.style.opacity = '0'
+function disappearButtons(prevBtn, nextBtn) {
+    prevBtn.style.opacity = '0'
+    nextBtn.style.opacity = '0'
 }
 
-function showButtons() {
-    prevButton.style.opacity = '0.7'
-    nextButton.style.opacity = '0.7'
+function showButtons(prevBtn, nextBtn) {
+    prevBtn.style.opacity = '0.7'
+    nextBtn.style.opacity = '0.7'
 }
 /** */
 function wayPoint(n) {
