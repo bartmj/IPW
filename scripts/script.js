@@ -15,6 +15,7 @@ const slidesPair9 = document.getElementsByClassName('slides9')
 const slidesPair10 = document.getElementsByClassName('slides10')
 
 const slideNow = document.getElementById('slide2-now')
+const slideNow4 = document.getElementById('slide4-now')
 
 const allSlidesPairs = [slidesPair1, slidesPair2, slidesPair3,
     slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8, slidesPair9, slidesPair10]
@@ -23,6 +24,7 @@ const allSlidesPairs = [slidesPair1, slidesPair2, slidesPair3,
 futureButton.style.display = 'none'
 // Wstępne wygaszenie slajdu 
 slideNow.style.display ='none'
+slideNow4.style.display ='none'
 // Mobile map buttons
 const mapBtn = document.getElementById('map-btn-1')
 const mapBtn2 = document.getElementById('map-btn-2')
@@ -39,7 +41,7 @@ window.addEventListener('resize', (event) => {
 });
 // Resize event
 /** */
-const waypoints = [true, false, false, false, false, false, false, false, true, false]
+const waypoints = [true, false, false, false, false, false, false, false, false, false]
 const slideIndexes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 const photoNr = document.getElementById('photo-count')
@@ -51,13 +53,17 @@ function plusSlides(n) {
             slideIndexes[i] += n;
             showSlides(slideIndexes[i], i);
 
-
-            if (slideIndexes[i] == 1) {
-                showButtons(futureButton)
+            // 🔵 Logika pokazywania futureButton tylko na slajdzie 1 w konkretnym waypoincie
+            if (i === 1 && slideIndexes[i] === 1) {
+                showButtons(futureButton);
             } else {
-                hideButtons(futureButton)
-                
+                hideButtons(futureButton);
             }
+            // if (slideIndexes[i] == 1) {
+            //     showButtons(futureButton)
+            // } else {
+            //     hideButtons(futureButton)
+            // }
         }
     });
 }
@@ -103,28 +109,46 @@ futureButton.onclick = () => {
 }
 
 const toggleFutureNow = () => {
-    let activeSlides = document.getElementsByClassName('mySlides');
+    const activeSlides = document.getElementsByClassName('mySlides');
 
-    if (!futureNowActive) {
-        // Włącz tryb "now" – pokazuje tylko slajd z "-now"
-        Array.from(activeSlides).forEach(slide => {
-            slide.style.display = 'none'
-        });
-        slideNow.style.display = 'block'
-        futureNowActive = true
-        hideButtons(prevButton, nextButton, opacityButton)
-    } else {
-        // Wyłącz tryb "now" – pokaż wszystkie slajdy
-        Array.from(activeSlides).forEach(slide => {
-            slide.style.display = 'block'
-        });
-        slideNow.style.display = 'none'
-        futureNowActive = false
-        showButtons(prevButton, nextButton, opacityButton)
+    if (waypoints[1]) {
+        // Logika dla waypoint 1 (Chocimska)
+        if (!futureNowActive) {
+            Array.from(activeSlides).forEach(slide => {
+                slide.style.display = 'none';
+            });
+            slideNow.style.display = 'block';
+            futureNowActive = true;
+            hideButtons(prevButton, nextButton, opacityButton);
+        } else {
+            Array.from(activeSlides).forEach(slide => {
+                slide.style.display = 'block';
+            });
+            slideNow.style.display = 'none';
+            futureNowActive = false;
+            showButtons(prevButton, nextButton, opacityButton);
+        }
+
+    } else if (waypoints[3]) {
+        // Logika dla waypoint 3 (np. Pałac Szustra)
+        if (!futureNowActive) {
+            Array.from(activeSlides).forEach(slide => {
+                slide.style.display = 'none';
+            });
+            slideNow4.style.display = 'block';
+            futureNowActive = true;
+            hideButtons(opacityButton);
+        } else {
+            Array.from(activeSlides).forEach(slide => {
+                slide.style.display = 'block';
+            });
+            slideNow4.style.display = 'none';
+            futureNowActive = false;
+            showButtons(opacityButton);
+        }
     }
+};
 
-    
-}
 /** Future button - end */
 /** Waypoints - beginning */
 window.addEventListener('scroll', () => {

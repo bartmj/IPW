@@ -173,6 +173,19 @@
     z-index: 2;
 }
 
+/* PAŁAC SZUSTRA  - TERAZ */
+
+#slide4-now {
+    background-image: url('../img/Pałac\ Szustra/SZUSTRA A3 NOW.png');
+
+    top: 300vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
+}
+
 /* PROMENADA */
 
 #slide5-bw {
