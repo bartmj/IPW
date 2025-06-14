@@ -16,6 +16,9 @@ const slidesPair10 = document.getElementsByClassName('slides10')
 
 const allSlidesPairs = [slidesPair1, slidesPair2, slidesPair3,
     slidesPair4, slidesPair5, slidesPair6, slidesPair7, slidesPair8, slidesPair9, slidesPair10]
+
+// Wstępne wygaszenie przycisku
+futureButton.style.display = 'none'
 // Mobile map buttons
 const mapBtn = document.getElementById('map-btn-1')
 const mapBtn2 = document.getElementById('map-btn-2')
@@ -83,48 +86,63 @@ toggleOpacity = () => {
 /** Waypoints - beginning */
 window.addEventListener('scroll', () => {
     let topOffset = window.pageYOffset
-    windowHeight = window.innerHeight
+    let windowHeight = window.innerHeight
+
     if (topOffset < (windowHeight / 2)) {
+        // PLAC UNII LUBELSKIEJ
         wayPoint(0)
         showButtons()
+        disappearButtons(futureButton)
     } else if ((topOffset > (windowHeight / 2)) && (topOffset < (windowHeight * 1.5))) {
+        // ULICA CHOCIMSKA
         wayPoint(1)
-        showButtons(prevButton, nextButton)
+        showButtons(prevButton, nextButton, futureButton)
     } else if (topOffset > (windowHeight * 1.5) && (topOffset < (windowHeight * 2.5))) {
+        // PARK MORSKIE OKO
         wayPoint(2)
-        disappearButtons(prevButton, nextButton)
+        disappearButtons(prevButton, nextButton, futureButton)
     } else if (topOffset > (windowHeight * 2.5) && (topOffset < (windowHeight * 3.5))) {
+        // PAŁAC SZUSTRA
         wayPoint(3)
         disappearButtons(prevButton, nextButton)
+        showButtons(futureButton)
     } else if (topOffset > (windowHeight * 3.5) && (topOffset < (windowHeight * 4.5))) {
+        // PROMENADA
         wayPoint(4)
-        disappearButtons(prevButton, nextButton)
+        disappearButtons(prevButton, nextButton, futureButton)
     } else if (topOffset > (windowHeight * 4.5) && (topOffset < (windowHeight * 5.5))) {
+        // ULICA KONDUKTORSKA
         wayPoint(5)
         disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 5.5) && (topOffset < (windowHeight * 6.5))) {
+        // ULICA DOLNA
         wayPoint(6)
         showButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 6.5) && (topOffset < (windowHeight * 7.5))) {
+        // KLUB SPORTOWY WARSZAWIANKA
         wayPoint(7)
         disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 7.5) && (topOffset < (windowHeight * 8.5))) {
+        // KRÓLIKARNIA
         wayPoint(8)
         disappearButtons(prevButton, nextButton)
     } else if (topOffset > (windowHeight * 8.5) && (topOffset < (windowHeight * 9.5))) {
+        // SKOCZNIA NARCIARSKA "SKARPA"
         wayPoint(9)
         showButtons(prevButton, nextButton)
     }
 })
 /** */
-function disappearButtons(prevBtn, nextBtn) {
-    prevBtn.style.opacity = '0'
-    nextBtn.style.opacity = '0'
+function disappearButtons(...buttons) {
+    buttons.forEach(btn => {
+        if (btn) btn.style.display = 'none'
+    })
 }
 
-function showButtons(prevBtn, nextBtn) {
-    prevBtn.style.opacity = '0.7'
-    nextBtn.style.opacity = '0.7'
+function showButtons(...buttons) {
+    buttons.forEach(btn => {
+        if (btn) btn.style.display = 'inline-block'
+    })
 }
 /** */
 function wayPoint(n) {
