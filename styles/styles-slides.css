@@ -85,7 +85,7 @@
     z-index: 2;
 }
 
-/* PLAC UNII LUBELSKIEJ - slajd 2 */
+/* ULICA CHOCIMSKA - slajd 2 */
 
 #slide2b-bw {
     background-image: url('../img/Chocimska/[ACC]\ CHOCIMSKA.jpg');
@@ -108,6 +108,19 @@
     top: 100vh;
 
     z-index: 0;
+}
+
+/* ULICA CHOCIMSKA - TERAZ */
+
+#slide2-now {
+    background-image: url('../img/Chocimska/CHOCIMSKA\ A3\ NOW.png');
+
+    top: 100vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
 }
 
 /* PARK MORSKIE OKO */

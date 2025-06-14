@@ -82,7 +82,39 @@ toggleOpacity = () => {
     }
 }
 /** Opacity button - end */
+/** Future button - beginning */
+let futureNowActive = false // stan toggle
 
+futureButton.onclick = () => {
+    toggleFutureNow()
+}
+
+const toggleFutureNow = () => {
+    let activeSlides = document.getElementsByClassName('mySlides');
+
+    if (!futureNowActive) {
+        // Włącz tryb "now" – pokazuje tylko slajd z "-now"
+        Array.from(activeSlides).forEach(slide => {
+            if (slide.id.includes('-now')) {
+                slide.style.display = 'block'
+            } else {
+                slide.style.display = 'none'
+            }
+        });
+        futureNowActive = true
+    } else {
+        // Wyłącz tryb "now" – pokaż wszystkie slajdy
+        Array.from(activeSlides).forEach(slide => {
+            if (!slide.id.includes('-now')) {
+                slide.style.display = 'block'
+            } else {
+                slide.style.display = 'none'
+            }
+        });
+        futureNowActive = false
+    }
+}
+/** Future button - end */
 /** Waypoints - beginning */
 window.addEventListener('scroll', () => {
     let topOffset = window.pageYOffset
