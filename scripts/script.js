@@ -94,7 +94,7 @@ window.addEventListener('scroll', () => {
         disappearButtons()
     } else if (topOffset > (windowHeight * 2.5) && (topOffset < (windowHeight * 3.5))) {
         wayPoint(3)
-        disappearButtons()
+         showButtons()
     } else if (topOffset > (windowHeight * 3.5) && (topOffset < (windowHeight * 4.5))) {
         wayPoint(4)
         disappearButtons()

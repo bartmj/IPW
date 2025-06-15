@@ -85,7 +85,7 @@
     z-index: 2;
 }
 
-/* PLAC UNII LUBELSKIEJ - slajd 2 */
+/* ULICA CHOCIMSKA  - slajd 2 */
 
 #slide2b-bw {
     background-image: url('../img/Chocimska/[ACC]\ CHOCIMSKA.jpg');
@@ -109,6 +109,22 @@
 
     z-index: 0;
 }
+
+/* ULICA CHOCIMSKA  - teraz */
+
+#slide2new {
+    background-image: url('../img/Chocimska/CHOCIMSKA\ A3\ NOW.png');
+
+    top: 100vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 1;
+}
+
+
+
 
 /* PARK MORSKIE OKO */
 
@@ -158,6 +174,19 @@
     top: 300vh;
 
     z-index: 2;
+}
+
+/* PAŁAC SZUSTRA - teraz */
+
+#slide4-bw {
+    background-image: url('../img/Pałac\ Szustra/SZUSTRA A3 NOW.png');
+
+    top: 300vh;
+
+    opacity: 100;
+    transition: opacity 2s;
+
+    z-index: 3;
 }
 
 /* PROMENADA */
